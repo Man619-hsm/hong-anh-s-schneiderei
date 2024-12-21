@@ -1,0 +1,2359 @@
+/*font-family: "ff-cocon-pro", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "ff-cocon-pro", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: "ff-cocon-pro", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: "ff-cocon-pro", sans-serif;
+font-weight: 700;
+font-style: italic;
+
+font-family: "ff-cocon-pro-extra-cn", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "ff-cocon-pro-extra-cn", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: "ff-cocon-pro-extra-cn", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: "ff-cocon-pro-extra-cn", sans-serif;
+font-weight: 700;
+font-style: italic;
+
+font-family: "ff-cocon-pro-condensed", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "ff-cocon-pro-condensed", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: "ff-cocon-pro-condensed", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: "ff-cocon-pro-condensed", sans-serif;
+font-weight: 700;
+font-style: italic;*/
+
+
+/*font-family: "poppins", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "poppins", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: "poppins", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: "poppins", sans-serif;
+font-weight: 700;
+font-style: italic;*/
+
+#kontakt-email {
+    color: #fff;
+}
+
+
+* {
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    /* Universal selector sets font and removes default margin/padding */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff; /* Set a white background color for the body */
+}
+
+
+h1, h2, h3 {
+    font-family: "ff-cocon-pro", sans-serif;
+    font-style: normal;
+    margin-bottom: 1em;
+
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2.3em;
+    text-align: center;
+
+}
+
+
+h2 {
+    font-weight: 500;
+    font-size: 2.2em;
+    margin-top: 20px; /* Add top margin for spacing */
+    text-align: center;
+
+}
+
+h3 {
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-bottom: 10px;
+
+}
+
+.dashed-line{
+    border: none;
+    height: 3px; /* Adjust height of the line */
+    width: 100%; /* Adjust width of the line */
+    background: repeating-linear-gradient(
+        to right,
+        #000,
+        #000 20px,  /* Length of each dash */
+        transparent 10px, /* Space between dashes */
+        transparent 30px  /* Total space + dash length */
+    );
+    border-radius: 1px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #B91F31;
+    color: #fff;
+
+
+}
+
+
+/*Header*/
+header > div {
+	display: flex;
+    background-color: #B91F31; /* Set a brown background color for the banner */
+    height: 125px;
+
+}
+
+main {
+    margin-top: 150px;
+}
+
+
+#logo img {
+    width: auto;
+    height: 100px; /* Set height as desired */
+    flex:  0 0 100px;
+	margin-right: 20px;
+}
+
+#meta-and-navi {
+	flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Aligns navigation links to the right */
+    list-style-type: none;
+    padding: 0;
+    margin-right: 50px;
+}
+
+header a {
+	text-decoration: none;
+    text-align: center;
+	color: #f2f2f2;
+    position: relative; /* Position the banner relative to its normal position */
+    width: 100%; /* Make the banner take up the full width of the screen */
+    height: auto; /* Automatically adjust the height based on the content */   
+    display: flex; /* Use flexbox layout for aligning child elements */
+    background-color: #B91F31; /* Set a brown background color for the banner */
+    z-index: 1; /* Set the stacking order to ensure it's below other elements */
+    /* Styles the banner with a background, center alignment, and removes excess margin/padding */
+    padding: 0; /* Adds padding inside the container */
+    margin: 0; /* Adds 20px margin above and below the container */
+
+}
+
+header i {
+	color: #fff; /*Farbe später anpasse/Bürger-icon*/
+}
+
+
+
+/*Hauptnavi*/
+#mobile-nav-icons {
+	text-align: right;
+}
+#main-nav.open #mobile-nav-icons i:nth-child(1),
+#main-nav:not(.open) #mobile-nav-icons i:nth-child(2) {
+	display: none;
+    margin-top: 10px;
+}
+#main-nav ul {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	margin-top: 70px;
+	border-top: 1px solid #fff;
+	display: none;
+}
+#main-nav.open ul {
+	display: block;
+    text-align: center;
+}
+#main-nav a {
+	font-size: 18px;
+	color: #fff;
+	padding: 10px ;
+	display: flex;
+	background-color: #B91F31;
+    text-align: center;
+    justify-content: center;
+}
+
+#main-nav a.active {
+    text-decoration: underline;
+}
+
+.fa.fa-bars.fa-3x, .fa.fa-close.fa-3x {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+/*WEBPAGE 1 - Index.html*/
+#index_h1 {
+    padding: 10px 50px;
+}
+
+#banner {
+    position: relative; /* Position the banner relative to its normal position */
+    width: 100%; /* Make the banner take up the full width of the screen */
+    height: auto; /* Automatically adjust the height based on the content */   
+    display: flex; /* Use flexbox layout for aligning child elements */
+    background-color: #B91F31; /* Set a brown background color for the banner */
+    z-index: 1; /* Set the stacking order to ensure it's below other elements */
+    /* Styles the banner with a background, center alignment, and removes excess margin/padding */
+    align-items: center; /* Vertically centers the child elements within the container */
+    padding: 0; /* Adds padding inside the container */
+    margin: 0; /* Adds 20px margin above and below the container */
+    justify-content: space-between; /* Spaces the child elements evenly with space between them */
+
+}
+
+#logo {
+    position: relative  ; /* Position the logo absolutely within the banner */
+    margin: 10px 0 0 40px;
+    z-index: 2; /* Ensure the logo appears above other banner elements */
+
+}
+
+
+
+/* Dropdown menu styles */
+
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the dropdown menu just below the parent link */
+    left: 0; /* Align the dropdown with the left edge of the parent link */
+    padding: 0;
+    border-radius: 5px;
+    z-index: 1000; /* Ensures it appears above other content */
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-list li a.dropdown-item {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dropdown-list li a:hover {
+    background-color: #FFFCF5;
+    color: #B91F31;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #B91F31; /* Haupt-Hintergrundfarbe für die Links */
+    top: 0;
+    text-align: center;
+    margin-left: 6px;
+    box-sizing: border-box;
+
+}
+
+.dropdown-item1 {
+    border-top: solid 1px #FFFCF5;
+
+}
+
+#dropdown-item2 {
+    border-top: solid 1px #FFFCF5;
+}
+
+
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+#intro{
+    position: relative; /* Position the intro text relative to its normal position */
+    background-color: #FFFCF5;
+    color: #B91F31;
+    border-top: solid 3px #B91F31;
+    border-bottom: solid 3px #B91F31;
+    margin-bottom: 30px;
+}
+
+#intro > ul {
+    list-style-type: disc; /* Use disc bullet points */
+    padding-left: 50px; /* Add padding to the left to indent the list */
+    margin-left: 50px; /* Remove any left margin */
+    margin-bottom: 20px;
+}
+
+#intro > ul > li {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+#intro > h2 {
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+#mehr_erfahren {
+    margin: 10px 0 50px 50px;
+    position: relative;
+    width: 15em;
+}
+
+
+#mehr_erfahren a {
+    color: #FFFCF5;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5px 20px;
+    background-color: #B91F31;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#mehr_erfahren a:hover {
+    color: #B91F31; /* Optional: Change color on hover if desired */
+    background-color: #FFFCF5;
+    border: solid 3px #B91F31 ;
+}
+
+#welcome {
+    border-top: solid 3px #B91F31;
+    border-bottom: solid 3px #B91F31;
+    background-color: #FFFCF5;
+    justify-content: center;
+
+}
+
+#welcome > p {
+    font-size: 1.3em;
+    margin: 40px 50px;
+    padding: 0 40px;
+
+}
+
+.clothes-subheading {
+    text-align: center;
+    font-size: 1.5em; /* Increases the font size to 2.5 times the default size */
+    width: 100%; /* Ensures the subheading spans the full width of the container */
+    height: auto; /* Automatically adjust the height based on the content */    
+    margin: 0; /* Removes any margin from the top of the subheading */
+    padding: 0;
+    font-weight: 600;
+    display: block;
+}
+
+.clothes-subheading-services {
+    text-align: center;
+    font-size: 1.5em; /* Increases the font size to 2.5 times the default size */
+    width: 100%; /* Ensures the subheading spans the full width of the container */
+    height: auto; /* Automatically adjust the height based on the content */    
+    margin: 0; /* Removes any margin from the top of the subheading */
+    padding: 0;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.clothes-subheading-index {
+    text-align: center;
+    font-size: 1.5em; /* Increases the font size to 2.5 times the default size */
+    width: 100%; /* Ensures the subheading spans the full width of the container */
+    height: auto; /* Automatically adjust the height based on the content */    
+    margin: 0; /* Removes any margin from the top of the subheading */
+    padding: 0;
+    font-weight: 600;
+    display: block;
+}
+
+.img_clothes-container {
+    position: relative; /* Positions the container relative to its normal position for absolute positioning inside */
+    background-color: #FFFCF5;
+    border: solid 5px #B91F31;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 200px;
+    height: 200px;
+}
+
+.img_clothes-container-index {
+    position: relative; /* Positions the container relative to its normal position for absolute positioning inside */
+    background-color: #FFFCF5;
+    border: solid 5px #B91F31;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 200px;
+    height: 200px;
+}
+
+
+.img_clothes {
+    width: 80%; /* Make the container take up the full width of its parent */
+    max-width: 230px; /* Set a maximum width for the container */
+    height: auto; 
+    max-height: 230px;
+    margin-bottom: 0; /* Removes any default margin from the bottom of the image */
+    padding-bottom: 0; /* Removes any padding from the bottom of the image */
+    /* This styles the coffee images to fill their containers proportionally while maintaining aspect ratio */
+}
+
+.clothing-button-container {
+    display: flex; /* Applies a flexbox layout to the container */
+    flex-direction: row; /* Arranges child elements (articles) in a horizontal row */
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 120px; /* Adds 20px spacing between the flex items */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    /* This sets up a flexible layout for the coffee container with even spacing between items */
+}
+
+#location-wrapper-index {
+    background-color: #B91F31; /* Sets the background color for the "location-wrapper" */
+    color: #ffffff; /* Sets the text color to white */
+    width: 100%; /* Set the width to 100% of the parent container */    
+    height: auto; /* Automatically adjust the height based on the content */    
+    display: flex; /* Applies a flexbox layout to the container */
+    flex-direction: column; /* Aligns the flex items vertically */
+    justify-content: flex-start; /* Aligns the content at the start of the container */
+    box-sizing: border-box; /* Includes padding and border within the element’s total width and height */
+    padding: 10px;
+    
+}
+
+#location-wrapper {
+    background-color: #B91F31; /* Sets the background color for the "location-wrapper" */
+    color: #ffffff; /* Sets the text color to white */
+    width: 100%; /* Set the width to 100% of the parent container */    
+    height: auto; /* Automatically adjust the height based on the content */    
+    display: flex; /* Applies a flexbox layout to the container */
+    flex-direction: column; /* Aligns the flex items vertically */
+    justify-content: flex-start; /* Aligns the content at the start of the container */
+    box-sizing: border-box; /* Includes padding and border within the element’s total width and height */
+    padding: 10px;
+    
+}
+
+#location-wrapper > h3 {
+    font-size: 1.5em; /* Sets the font size to 1.5*/
+    padding: 10px;
+    margin: 0 10px;
+}
+
+#location-wrapper > p {
+    line-height: 2; /* Sets the line height to double the default value for easier readability */
+    font-size: 1em; /* Sets the font size for both list items and paragraphs */
+    margin-bottom: 20px; /* Adds bottom margin to create space below the list items and paragraphs */
+    padding-left: 20px; /* Adds left padding to the list and paragraphs */
+    /* Adjusts list and paragraph style for spacing in the "location-wrapper" section */
+}
+
+#location-wrapper-index > h3 {
+    font-size: 1.5em; /* Sets the font size to 1.5*/
+    padding: 10px;
+    margin: 0 10px;
+}
+
+#location-wrapper-index > p {
+    line-height: 2; /* Sets the line height to double the default value for easier readability */
+    font-size: 1em; /* Sets the font size for both list items and paragraphs */
+    margin-bottom: 20px; /* Adds bottom margin to create space below the list items and paragraphs */
+    padding-left: 20px; /* Adds left padding to the list and paragraphs */
+    /* Adjusts list and paragraph style for spacing in the "location-wrapper" section */
+}
+
+#location-index {
+    display: flex;
+}
+
+
+
+#email {
+    color: #FFFCF5;
+}
+
+#reviews-headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#reviews-headline > h2 {
+    margin-top: 0;
+    padding: 0;
+}
+
+.reviews-container {
+    border: solid 4px #B91F31;
+    border-radius: 8px;
+    margin: 0 100px 20px 100px;
+    padding: 10px 40px;
+}
+
+.reviews-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews-name {
+    font-family: "ff-cocon-pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.8em;
+    margin: 0;
+    padding: 0;
+}
+
+.img_review {
+    margin-top: 20px;
+}
+
+.reviews-text {
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.google-reviews {
+    margin: 10px 0;
+    font-family: "ff-cocon-pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #A9A8AB;
+    font-size: 0.8em;
+}
+
+
+footer {
+    background-color: #B91F31; /* Sets the background color of the footer */
+    color: #fff; /* Sets the text color of the footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer > h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+footer > p {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer > p >  a {
+    color: #fff; /* Sets the text color of the footer */
+}
+
+.copyright {
+    font-size: 1em;
+}
+
+.white-footer {
+    background-color: #FFFCF5; /* Sets the background color of the footer */
+    color: #000; /* Sets the text color of the footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.white-footer > p > a{
+    color: #000; /* Sets the text color of the footer */
+}
+
+
+
+/* WEBPAGE 2 - services.html */
+
+#header-services > h1 {
+    font-size: 2.4em;
+    margin-top: 20px;
+}
+
+#header-services > h3 {
+    font-family: "poppins", sans-serif;
+    font-size: 1.6em;
+    margin-top: 20px;
+}
+
+#header-services > ul li {
+    font-family: "poppins", sans-serif;
+    font-size: 1.2em;
+    margin-top: 20px;
+    border: solid 1px #B91F31;
+    border-radius: 10px;
+    background-color: #B91F31;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 400px 10px 50px;
+}
+
+#header-services > ul {
+    margin-bottom: 40px;
+}
+
+.services > h2 {
+    color: #B91F31;
+    font-size: 2em;
+}
+
+.services > p {
+    margin: 0 80px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 50px;
+ 
+}
+
+.services > p a {
+   font-weight: 600;
+   text-decoration: underline;
+   color: #000;
+ 
+}
+
+.services > p strong {
+    font-weight: 600;
+    color: #000;
+}
+
+.services > p a.kontakt-link {
+    font-weight: 400;
+  
+}
+
+/* WEBPAGE 3 - kontakt.html */
+
+
+
+
+#location {
+    flex: 1; /* Allow location to take up available space */
+    min-width: 300px; /* Set a minimum width for the location section */
+}
+
+
+
+
+
+#form {
+    display: flex; /* Applies flexbox layout to the form */
+    flex-direction: column; /* Stacks the form elements in a vertical column */
+    padding: 20px 0 20px 50px; /* Adds padding inside the form container */
+    background-color: #FFFCF5; /* Sets the background color to white */
+    color: #B91F31; /* Sets the text color to dark brown */
+    border-top: solid 3px #B91F31; /* Adds a solid border with a specified color */
+    border-bottom: solid 3px #B91F31; /* Adds a solid border with a specified color */
+    width: 100%; /* Ensures the form container takes up 70% of the available width */
+    max-width: 1500px; /* Sets a maximum width to prevent the form from becoming too wide */
+    margin: 0 auto; /* Centers the form horizontally on the page */
+    min-width: 800px;
+    flex: 1;
+}
+
+
+#form-wrapper {
+    background-color: #ffffff; /* Sets the background color of the form wrapper */
+    flex: 1; /* Allow form to take up available space */
+    min-width: 300px; /* Set a minimum width to prevent it from getting too small */
+}
+
+.form_heading {
+    font-size: 2em; /* Sets a larger font size for the registration form heading */
+    margin: 0 0 10px 0; /* Adds space below the heading */
+    padding: 0;
+    text-align: left; /* Centers the heading text */
+    text-decoration: underline;
+    /* Styles the form headings with a larger font size and spacing */
+}
+
+form h4 {
+    font-family: "ff-cocon-pro", sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.checkbox label {
+    font-family: "poppins", sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+label {
+    font-family: "ff-cocon-pro", sans-serif; /* Sets the font family for the label text */
+    font-weight: 450; /* Sets a medium weight for the label text */
+    font-style: normal; /* Ensures the text is not italic */
+    font-size: 1.5em; /* Sets the size of the label text slightly larger than normal */
+}
+
+sup {
+    color: #B91F31; /* Sets the color of the superscript text to a specific purple */
+}
+
+.textinput {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.textinput label{
+    margin-bottom: 10px;
+}
+
+.textinput, .radioinput {
+    margin-bottom: 20px; /* Adds 20px of space below each form element */
+    /* Add space between form elements */
+}
+
+.checkbox {
+    margin-top: 20px;
+    margin-bottom: 40px; /* Adds 20px of space below the checkbox element */
+    /* Adds space below the checkbox */
+}
+
+
+/*Custom-style checkbox*/
+
+#kontakt-telefon {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+
+}
+
+
+input[type="checkbox"] {
+    appearance: none; /* Removes the default checkbox styling */
+    background-color: #ffffff; /* Sets the background color of the checkbox to white */
+    margin: 0; /* Removes any default margin around the checkbox */
+    color: currentColor; /* Uses the current text color for the checkbox, though this may not be visible unless styled further */
+    width: 1.3em; /* Sets the width of the checkbox */
+    height: 1.3em; /* Sets the height of the checkbox */
+    border: 0.15em solid #B91F31; /* Adds a solid border with a specified color */
+    border-radius: 0.15em; /* Slightly rounds the corners of the checkbox */
+    transform: translateY(-0.075em); /* Adjusts the position of the checkbox slightly, moving it up a bit */
+    /* Customizes the appearance of the checkbox by removing default styles and adding new styling */
+}
+
+input[type="checkbox"]:checked {
+    background-color: #B91F31; /* Checked background color */
+    border-color: #B91F31; /* Checked border color */
+}
+
+input[type="checkbox"]:checked::after {
+    content: ''; /* Creates an empty content block for the checkmark */
+    position: absolute; /* Positions the checkmark relative to the checkbox */
+    left: 4px; /* Moves the checkmark 4px from the left edge of the checkbox */
+    bottom: 2.5px; /* Positions the checkmark 2.5px from the bottom of the checkbox */
+    width: 3px; /* Sets the width of the checkmark line */
+    height: 7px; /* Sets the height of the checkmark line */
+    border: solid #fff; /* Sets the color of the checkmark to white */
+    border-width: 0 2px 2px 0; /* Sets the thickness of the checkmark lines; only the right and bottom borders are drawn */
+    transform: rotate(45deg); /* Rotates the border lines to form a checkmark shape */
+    /* This block customizes the appearance of the checkmark when the checkbox is checked */
+}
+
+#checkbox_button {
+    display: block; /* Ensures the checkbox button is displayed as a block element */
+    margin: 20px 0 0 10px; /* Adds margin around the checkbox button */
+    /* Styles the checkbox button with a margin */
+}
+
+/* Custom textbox styles */
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    background-color: #ffffff; /* Sets a white background for the input fields */
+    border: 1px solid #B91F31; /* Adds a solid border with a specific color */
+    width: 75%; /* Ensures the input fields take up 50% of their container's width */
+    box-sizing: border-box; /* Ensures padding and border are included in the element’s total width/height */
+    border-radius: 2px; /* Rounds the corners of the input fields slightly */
+    padding: 5px 100px 5px 10px;/* Adjust padding as needed */
+    flex: 1;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+    background-color: #ffd9dd; /* Changes the background color when the input is focused (light lavender) */
+    border-color: #B91F31; /* Changes the border color when the input is focused */
+    outline: none; /* Removes the default outline around focused input fields */
+    border-radius: 2px; /* Keeps the rounded corners when focused */
+}
+
+input::placeholder, textarea::placeholder {
+    color: #a0a0a0; /* Ensure placeholder color is not too light */
+    font-size: 1.2em;
+}
+
+
+#bild-btn {
+    color: #B91F31; /* Sets the text color for the submit button */
+    padding: 3px 20px; /* Adds padding inside the button for better spacing */
+    background-color: #FFFCF5; /* Sets a light background color for the button */
+    border: solid 2px #B91F31; /* Adds a border around the button with the same color as the text */
+    border-radius: 2px; /* Slightly rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    font-size: 1.3em; /* Sets the font size for the button text */
+    font-weight: 600; /* Makes the button text bold */
+    margin-top: 10px; /* Adds some space above the button */
+    font-family: "poppins", sans-serif; /* Applies the "the seasons" font family to the button */
+    /* Styles the submit button with padding, background color, and rounded corners */
+}
+
+#bild-btn:hover {
+    background-color: #B91F31; /* Changes the background color on hover */
+    color: #ffffff; /* Changes the text color to white on hover */
+    border: solid 2px #B91F31; /* Changes the border color on hover */
+    /* Hover effect for the submit button, enlarging and changing color */
+}
+
+#submit-btn {
+    color: #fff; /* Sets the text color for the submit button */
+    padding: 3px 20px; /* Adds padding inside the button for better spacing */
+    background-color: #B91F31; /* Sets a light background color for the button */
+    border: solid 1px #B91F31; /* Adds a border around the button with the same color as the text */
+    border-radius: 2px; /* Slightly rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    font-size: 1.3em; /* Sets the font size for the button text */
+    font-weight: 600; /* Makes the button text bold */
+    margin-top: 20px; /* Adds some space above the button */
+    font-family: "poppins", sans-serif; /* Applies the "the seasons" font family to the button */
+    /* Styles the submit button with padding, background color, and rounded corners */
+}
+
+#submit-btn:hover {
+    background-color: #FFFCF5; /* Changes the background color on hover */
+    color: #B91F31; /* Changes the text color to white on hover */
+    border: solid 2px #B91F31; /* Changes the border color on hover */
+    /* Hover effect for the submit button, enlarging and changing color */
+}
+
+
+/* WEBPAGE 4 - preise-aenderungen.html */
+
+.preise-h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+
+}
+
+.preise-h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.click-subheading {
+    color: #707070;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.red-textbox {
+    color: #707070;
+    font-size: 1.2em;
+    border: solid 2px #B91F31;
+    padding: 20px 40px;
+    margin: 50px 250px 90px 250px;
+    text-align: center;
+}
+
+.red-textbox > p a.kontakt-link {
+    color: #707070;
+
+}
+
+
+.preise-clothing-button-container {
+    display: flex; /* Applies a flexbox layout to the container */
+    flex-direction: row; /* Arranges child elements (articles) in a horizontal row */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    gap: 150px;
+    /* This sets up a flexible layout for the coffee container with even spacing between items */
+}
+
+
+ 
+.preise-clothing-button-container .clothes-subheading {
+    text-align: center; /* Centers the text inside the coffee-subheading */
+    font-size: 1.5em; /* Increases the font size to 2.5 times the default size */
+    width: 80%; /* Ensures the subheading spans the full width of the container */
+    height: auto; /* Automatically adjust the height based on the content */    
+    margin: 0; /* Removes any margin from the top of the subheading */
+    padding: 0;
+    font-weight: 600;
+}
+
+
+.preise-clothing-button-container .img_clothes-container {
+    position: relative; /* Positions the container relative to its normal position for absolute positioning inside */
+    background-color: #FFFCF5;
+    border: solid 5px #B91F31;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin-top: 20px;
+}
+
+
+
+.preise-clothing-button-container .img_clothes {
+    width: 80%; /* Make the container take up the full width of its parent */
+    max-width: 230px; /* Set a maximum width for the container */
+    height: auto; 
+    max-height: 230px;
+    margin-bottom: 0; /* Removes any default margin from the bottom of the image */
+    padding-bottom: 0; /* Removes any padding from the bottom of the image */
+    /* This styles the coffee images to fill their containers proportionally while maintaining aspect ratio */
+}
+
+.clothing-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.preise-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #B91F31;
+    background-color: #FFFCF5;
+    margin: 50px 150px 50px 150px;
+    padding: 0 0 20px 0;
+}
+
+.preise-box p {
+    color: #707070;
+}
+
+.preise-headline {
+    margin: 20px 0 10px 0;
+    font-size: 2em;
+}
+
+table {
+    width: 70%;
+    height: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+
+}
+
+table th {
+    background-color: #B91F31;
+    color: #fff;
+    font-family: "ff-cocon-pro", sans-serif;
+    font-weight: 500;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 5px 0;
+}
+
+table th:first-child {
+    border-right: solid 1px #fff;
+}
+
+table tr {
+    background-color: #fff;
+    text-align: center;
+    font-family: "poppins", sans-serif;
+    font-size: 1.2em;
+    border: solid 1px #B91F31;
+}
+
+
+table tr td {
+    border: solid 1px #B91F31;
+    padding: 5px 0;
+}
+
+table tr td:first-child {
+    width: 70%;
+}
+
+.preise-subheading{
+    font-family: "poppins", sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+}
+
+.preise-box > .preise-text {
+    font-family: "poppins", sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 15px 0 20px 0;
+    color: #000;
+}
+
+.preise-text strong {
+    font-family: "poppins", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #B91F31;
+    color: #fff;
+    border: solid 2px #fff;
+    padding: 6px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#backToTop:hover {
+    background-color: #FFFCF5;
+    color: #B91F31;
+    border: solid 2px #B91F31;
+}
+
+
+/*IMPRESSUM*/
+.impressum {
+    margin-left: 50px;
+    font-size: 1.4em;
+    margin-bottom: 30px;
+
+}
+
+em {
+    font-family: "ff-cocon-pro", sans-serif;
+    font-weight: 600;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+
+.footer-content > div > h3 {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.footer-content > div > p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.footer-content > div > p > a{
+    color: #fff;
+
+}
+
+.flaticon {
+    margin: 0 auto;
+}
+
+
+
+
+/*MIX DESKTOP VERSION*/
+
+
+@media screen and (min-width: 768px) {
+
+    .mobile-view {
+        display: none;
+    }
+	
+	/*Haupnavi desktop*/
+	#mobile-nav-icons {
+		display: none;
+	}
+
+	#main-nav ul {
+		display: block;
+		margin-top: 35px ; /*bei egenem logo anpassen*/
+		list-style-type: none;
+		border-top: 0 none;
+		position: static;
+        float: right;
+
+	}
+
+	
+	#main-nav li {
+		display: inline-block;
+	}
+	#main-nav li.mobile-only {
+		display: none;
+	}
+	#main-nav a {
+		border-bottom: 0 none;
+		margin-right: 0;
+        padding: 10px 25px;
+	}
+	#main-nav a:hover,
+	#main-nav a.current {
+        text-decoration: underline;
+		
+	} 
+
+    #main-nav a.active {
+        text-decoration: underline;
+    }
+
+
+
+	/*fixed header*/
+	#page.header-fixed {
+		padding-top: 270px; /*muss später angepasst werden je nachdem welches logo du verwendest (höhe logo und abstand oben/unten)*/
+	}
+	.header-fixed header {
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		position: fixed;
+	}
+	.header-fixed header > div {
+		margin: 0 auto;
+		max-width: 900px; /*ACHTUNG: beachtet selbstständig, dass ihr dieses max-width auch im media query von Aufgabe 2 nun ergänzen müsst*/
+	}
+	.header-fixed #logo img {
+		width: 50%; 
+		padding-left: 10px;/*logo bei bedarf ändern*/
+	}
+	.header-fixed #meta {
+		display: none;
+	}
+	.header-fixed #main-nav ul {
+		margin-top: 30px;
+	}
+	
+
+
+	footer {
+		display: flex;
+	}
+
+    .kontakt-container {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        margin: 0 auto;
+        gap: 0;
+        padding: 0;
+        flex: 1;
+        width: 100%; 
+        flex-wrap: wrap;
+    
+    }
+
+    
+
+    #form-wrapper, #location {
+        flex: 1; /* Ensures they take equal width */
+        display: flex;
+        flex-direction: column; /* Stacks content vertically */
+    }
+
+    #location {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #location-wrapper {
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .iframe-container {
+        flex: 1;
+        display: flex;  
+        width: 100%;
+        height: auto;
+      
+    }
+
+    iframe {
+        flex: 1;
+        height: 100%;
+    }
+
+
+ 
+
+    #location-wrapper > h3 {
+        font-size: 1.7em; /* Sets the font size to 1.5*/
+        padding: 10px;
+        margin: 0 10px;
+
+    }
+    
+    #location-wrapper > p {
+        line-height: 2; /* Sets the line height to double the default value for easier readability */
+        font-size: 1.3em; /* Sets the font size for both list items and paragraphs */
+        margin-bottom: 20px; /* Adds bottom margin to create space below the list items and paragraphs */
+        padding-left: 20px; /* Adds left padding to the list and paragraphs */
+        /* Adjusts list and paragraph style for spacing in the "location-wrapper" section */
+    }
+
+
+    /* Set #location-index to display flex in row layout */
+    #location-index {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    /* Define 50% width for address and iframe sections */
+    #location-wrapper-index {
+        flex: 1;
+        max-width: 50%; /* Limit to 50% width */
+        box-sizing: border-box;
+        background-color: #B91F31; /* Background color for left section */
+        color: white;
+    }
+
+
+    #location-wrapper-index > h3 {
+        font-size: 1.7em; /* Sets the font size to 1.5*/
+        padding: 10px;
+        margin: 0 10px;
+
+    }
+    
+    #location-wrapper-index > p {
+        line-height: 2; /* Sets the line height to double the default value for easier readability */
+        font-size: 1.3em; /* Sets the font size for both list items and paragraphs */
+        margin-bottom: 20px; /* Adds bottom margin to create space below the list items and paragraphs */
+        padding-left: 20px; /* Adds left padding to the list and paragraphs */
+        /* Adjusts list and paragraph style for spacing in the "location-wrapper" section */
+    }
+
+
+    /* Define 50% width for iframe container */
+    #iframe-container-index {
+        flex: 1;
+        max-width: 50%; /* Limit to 50% width */
+        box-sizing: border-box;
+    }
+
+    /* Set iframe to occupy full width and height within container */
+    #iframe-container-index iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+     
+
+  
+
+
+
+
+
+
+
+/* Mobile-only styles */
+@media (max-width: 768px) {
+
+
+    .desktop-view {
+        display: none;
+    }
+    
+    #logo {
+        display: flex;
+        justify-content: center; /* Centers the logo horizontally */
+        width: 100%; /* Ensures the container takes up full width */
+        margin: 0; /* Removes any existing margins */
+        margin-top: 10px;
+        margin-left: 70px;
+    }
+
+    #logo img {
+        height: 100px; /* Adjust height as needed */
+        margin: 0 auto; /* Center-aligns the logo within the flex container */
+        z-index: 1;
+    }
+
+    #main-nav ul {
+
+		margin-top: 20px ; /*bei egenem logo anpassen*/
+        z-index: 2;
+        text-align: center;
+
+	}
+
+    #main-nav a {
+        border-bottom: solid 1px #fff;
+        z-index: 2;
+
+	}
+
+    body, html {
+        overflow-x: hidden;
+    }
+    
+
+    h1{
+        font-size: 1.2em;
+    }
+
+    h2{
+        font-size: 1.4em;
+    }
+
+    h3{
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.5em;
+    }
+
+    .dashed-line {
+        height: 2px;
+        margin-top: 25px;
+       
+    }
+
+
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+
+    /*WEBAGE 1 - HOME*/
+
+    #banner {
+        position: relative; /* Position the banner relative to its normal position */
+        width: 100%; /* Make the banner take up the full width of the screen */
+        height: auto; /* Automatically adjust the height based on the content */   
+        max-height: 80px;
+        display: flex; /* Use flexbox layout for aligning child elements */
+        background-color: #ffffff; /* Set a brown background color for the banner */
+        z-index: 1; /* Set the stacking order to ensure it's below other elements */
+        /* Styles the banner with a background, center alignment, and removes excess margin/padding */
+        align-items: center; /* Vertically centers the child elements within the container */
+        justify-content: center; /* Spaces the child elements evenly with space between them */
+        padding: 10px; /* Adds padding inside the container */
+        margin: 0; /* Adds 20px margin above and below the container */
+        border-bottom: solid 3px #B91F31 ;
+    }
+    
+    #logo {
+        z-index: 2;
+    }
+
+    .mobile-menu ul{
+        flex-direction: column;
+        position: absolute; /* Position the mobile menu absolutely */
+        top: 100px; /* Align the mobile menu with the top of the page */
+        right: 0; /* Align the mobile menu with the right edge of the page */
+        z-index: 1000; /* Ensure the mobile menu appears above other content */
+        width: 100%;
+        text-align: center;
+    }
+    
+
+
+    #main-nav a.active {
+        text-decoration: underline;
+    }
+
+    #intro {
+        border-top: none;
+    }
+
+    
+    #intro > ul > li {
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+
+    #intro > h2 {
+        padding-top: 0;
+        margin-bottom: 15px;
+    }
+
+    #mehr_erfahren {
+        margin: 10px 0 30px 50px;
+        position: relative;
+        width: 15em;
+    }
+    
+    
+    #mehr_erfahren a {
+        color: #FFFCF5;
+        font-size: 0.8em;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 7px 20px;
+        background-color: #B91F31;
+        border-radius: 7px;
+        text-align: center;
+    }
+
+    #welcome > p {
+        font-size: 1em;
+        margin: 40px 50px;
+        padding: 0;
+    
+    }
+
+    .clothes-subheading {
+        text-align: center;
+        font-size: 0.7em; /* Increases the font size to 2.5 times the default size */
+        width: 100%; /* Ensures the subheading spans the full width of the container */
+        height: auto; /* Automatically adjust the height based on the content */    
+        margin: 0; /* Removes any margin from the top of the subheading */
+        padding: 0;
+        font-weight: 600;
+        display: block;
+    }
+    
+    .img_clothes {
+        width: 70%; /* Make the container take up the full width of its parent */
+        max-width: 230px; /* Set a maximum width for the container */
+        height: auto; 
+        max-height: 230px;
+        margin-bottom: 0; /* Removes any default margin from the bottom of the image */
+        padding-bottom: 0; /* Removes any padding from the bottom of the image */
+        /* This styles the coffee images to fill their containers proportionally while maintaining aspect ratio */
+    }
+
+
+    .img_clothes-container-index {
+        position: relative; /* Positions the container relative to its normal position for absolute positioning inside */
+        background-color: #FFFCF5;
+        border: solid 3px #B91F31;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        width: 90px !important;
+        height: 90px !important;
+
+    }
+
+    .clothes-subheading-index {
+        text-align: center;
+        font-size: 0.9em; /* Increases the font size to 2.5 times the default size */
+        width: 100%; /* Ensures the subheading spans the full width of the container */
+        height: auto; /* Automatically adjust the height based on the content */    
+        margin: 0; /* Removes any margin from the top of the subheading */
+        padding: 0;
+        font-weight: 600;
+        display: block;
+    }
+    
+
+    #img_standort {
+        width: 4%;
+        height: auto;
+    }
+
+    #location {
+        margin-top: 20px;
+    }
+
+    #location-index {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #location-wrapper > h3 {
+        font-size: 1.3em; /* Sets the font size to 1.5*/
+        padding: 10px;
+        margin: 0 10px;
+    }
+    
+    #location-wrapper > p {
+        line-height: 2; /* Sets the line height to double the default value for easier readability */
+        font-size: 1em; /* Sets the font size for both list items and paragraphs */
+        margin-bottom: 20px; /* Adds bottom margin to create space below the list items and paragraphs */
+        padding-left: 20px; /* Adds left padding to the list and paragraphs */
+        /* Adjusts list and paragraph style for spacing in the "location-wrapper" section */
+    }
+
+    
+    
+
+    #img_review-headline {
+        width: 10%;
+        height: auto;
+    }
+    
+
+    .img_review {
+        width: 12%;
+        height: auto;
+        margin-bottom: 5px;
+        margin-top: 15px
+    }
+
+    .img_star-rating {
+        width: 20%;
+        height: auto;
+    }
+    
+    .reviews-container {
+        border: solid 3px #B91F31;
+        border-radius: 5px;
+        margin: 0 20px 15px 20px;
+        padding: 5px 20px;
+    }
+    
+
+    .reviews-name {
+        font-family: "ff-cocon-pro", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+    }
+   
+    
+    .reviews-text {
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 20px;
+    
+    }
+
+    
+    .google-reviews {
+        margin: 10px 0;
+        font-family: "ff-cocon-pro", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #A9A8AB;
+        font-size: 0.5em;
+    }
+    
+    
+    
+    footer > h3 {
+        font-size: 1.1em;
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+    
+    footer > p {
+        font-size: 0.8em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    
+    .copyright {
+        font-size: 0.8em;
+    }
+
+
+
+/* WEBPAGE 2 - services.html */
+
+
+    .preise-clothing-button-container-services {
+        display: flex; /* Applies a flexbox layout to the container */
+        flex-direction: row; /* Arranges child elements (articles) in a horizontal row */
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        gap: 50px;
+        /* This sets up a flexible layout for the coffee container with even spacing between items */
+    }  
+    
+    .clothes-subheading-services{
+        font-size: 0.7em;
+    }
+
+    #services-icon-container1 {
+        gap: 80px;
+    }
+
+
+    #header-services > h1 {
+        font-size: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    #header-services > h3 {
+        font-family: "poppins", sans-serif;
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+
+    #header-services > ul li {
+        font-family: "poppins", sans-serif;
+        font-size: 0.9em;
+        margin-top: 20px;
+        border: solid 1px #B91F31;
+        border-radius: 10px;
+        background-color: #B91F31;
+        color: #fff;
+        padding: 5px 15px;
+        margin: 5px 50px 5px 50px;
+    }
+
+    #header-services > ul {
+        margin-bottom: 40px;
+    }
+
+    .services > h2 {
+        color: #B91F31;
+        font-size: 1.2em;
+    }
+
+    .services > p {
+        margin: 0 20px;
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 50px;
+    
+    }
+
+    .services > p a {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #000;
+    
+    }
+
+    .services > p strong {
+        font-weight: 600;
+        color: #000;
+    }
+
+    .services > p a.kontakt-link {
+        font-weight: 400;
+    
+    }
+
+    .preise-box {
+        display: none;
+        position: relative;
+    }
+
+    .close-btn {
+        background-color: #FFFCF5;
+        border: none;
+        font-size: 1.8em;
+        font-weight: 300;
+        cursor: pointer;
+        color: #B91F31; /* Adjust color as needed */
+        border: solid 2px #B91F31;
+        width: 22px;
+        height: 22px;
+        padding-top: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+
+    .clothing-button-container {
+        display: flex; /* Applies a flexbox layout to the container */
+        flex-direction: row; /* Arranges child elements (articles) in a horizontal row */
+        justify-content: center;
+        margin: 0 20px 15px 20px;
+        gap: 5px; /* Adds 20px spacing between the flex items */
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        /* This sets up a flexible layout for the coffee container with even spacing between items */
+    }
+
+    .preise-h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .preise-h2 {
+        margin-top: 0;
+        font-size: 1.3em;
+    }
+
+    .preise-clothing-button-container {
+        display: flex; /* Applies a flexbox layout to the container */
+        flex-direction: row; /* Arranges child elements (articles) in a horizontal row */
+        justify-content: center;
+        margin: 0 20px 15px 20px;
+        gap: 10px; /* Adds 20px spacing between the flex items */
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        /* This sets up a flexible layout for the coffee container with even spacing between items */
+    }
+
+    .img_clothes-container {
+        width: 110px !important;
+        height: 110px !important;
+        border: solid 3px #B91F31 !important; 
+
+    }
+
+    .clothes-subheading {
+        font-size: 1em !important; /* Increases the font size to 2.5 times the default size */
+    }
+    
+    .red-textbox {
+        margin: 0 20px;
+        padding: 10px ;
+        font-size: 1.5em;
+    }
+
+    .preise-headline {
+        font-size: 1.5em;
+    }
+
+    .preise-subheading {
+        font-size: 1em;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    .preise-box {
+        margin: 20px 20px 15px 20px;
+        padding: 0 0 20px 0;
+    }
+
+    .preise-box table {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 0 0 20px 0;
+        width: 425px;
+    }
+
+    .preise-box th {
+        font-size: 1em;
+    }
+
+    .preise-box td {
+      font-size: 0.8em;
+    }
+
+
+    .preise-box > p {
+        font-size: 0.7em;
+        text-align: center;
+       
+    }
+
+
+    .preise-text {
+        font-size: 1em !important;
+        margin: 20px 0 20px 0 !important;
+        text-align: center;
+    }
+
+    /* WEBPAGE 3 - kontakt.html */
+    #location {
+        flex-direction: column;
+    }
+
+    .kontakt-location-box > #location-wrapper {
+        padding-bottom: 0;
+    
+
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+   
+
+    #form {
+        display: flex; /* Applies flexbox layout to the form */
+        flex-direction: column; /* Stacks the form elements in a vertical column */
+        padding: 20px 0 20px 20px; /* Adds padding inside the form container */
+        background-color: #FFFCF5; /* Sets the background color to white */
+        color: #B91F31; /* Sets the text color to dark brown */
+        border-top: solid 3px #B91F31; /* Adds a solid border with a specified color */
+        border-bottom: solid 3px #B91F31; /* Adds a solid border with a specified color */
+        max-width: 1500px; /* Sets a maximum width to prevent the form from becoming too wide */
+        margin: 0 auto; /* Centers the form horizontally on the page */
+        min-width: 600px;
+        margin-top: 20px;
+    }
+
+    #form-wrapper {
+        background-color: #ffffff; /* Sets the background color of the form wrapper */
+    }
+
+    .form_heading {
+        font-size: 1.5em; /* Sets a larger font size for the registration form heading */
+        margin: 0 0 10px 0; /* Adds space below the heading */
+        padding: 0;
+        text-align: left; /* Centers the heading text */
+        text-decoration: underline;
+        /* Styles the form headings with a larger font size and spacing */
+    }
+
+    form h4 {
+        font-family: "ff-cocon-pro", sans-serif;
+        font-weight: 500;
+        font-size: 1.2em;
+    }
+
+    .checkbox label {
+        font-family: "poppins", sans-serif;
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    label {
+        font-family: "ff-cocon-pro", sans-serif; /* Sets the font family for the label text */
+        font-weight: 450; /* Sets a medium weight for the label text */
+        font-style: normal; /* Ensures the text is not italic */
+        font-size: 1.2em; /* Sets the size of the label text slightly larger than normal */
+    }
+
+
+    #kontakt-telefon {
+        margin: 30px 0;
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: 600;
+
+    }
+
+
+    input[type="checkbox"] {
+        appearance: none; /* Removes the default checkbox styling */
+        background-color: #ffffff; /* Sets the background color of the checkbox to white */
+        margin: 0; /* Removes any default margin around the checkbox */
+        color: currentColor; /* Uses the current text color for the checkbox, though this may not be visible unless styled further */
+        width: 1.2em; /* Sets the width of the checkbox */
+        height: 1.2em; /* Sets the height of the checkbox */
+        border: 0.15em solid #B91F31; /* Adds a solid border with a specified color */
+        border-radius: 0.15em; /* Slightly rounds the corners of the checkbox */
+        /* Customizes the appearance of the checkbox by removing default styles and adding new styling */
+    }
+
+ 
+
+ 
+    /* Custom textbox styles */
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+        background-color: #ffffff; /* Sets a white background for the input fields */
+        border: 1px solid #B91F31; /* Adds a solid border with a specific color */
+        width: 60%; /* Ensures the input fields take up 50% of their container's width */
+        box-sizing: border-box; /* Ensures padding and border are included in the element’s total width/height */
+        border-radius: 2px; /* Rounds the corners of the input fields slightly */
+        padding: 5px 100px 5px 10px/* Adjust padding as needed */
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+        background-color: #ffd9dd; /* Changes the background color when the input is focused (light lavender) */
+        border-color: #B91F31; /* Changes the border color when the input is focused */
+        outline: none; /* Removes the default outline around focused input fields */
+        border-radius: 2px; /* Keeps the rounded corners when focused */
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: #a0a0a0; /* Ensure placeholder color is not too light */
+        font-size: 1em;
+    }
+
+
+    #bild-btn {
+        color: #B91F31; /* Sets the text color for the submit button */
+        padding: 3px 20px; /* Adds padding inside the button for better spacing */
+        background-color: #FFFCF5; /* Sets a light background color for the button */
+        border: solid 2px #B91F31; /* Adds a border around the button with the same color as the text */
+        border-radius: 2px; /* Slightly rounds the corners of the button */
+        cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+        font-size: 1em; /* Sets the font size for the button text */
+        font-weight: 600; /* Makes the button text bold */
+        margin-top: 10px; /* Adds some space above the button */
+        font-family: "poppins", sans-serif; /* Applies the "the seasons" font family to the button */
+        /* Styles the submit button with padding, background color, and rounded corners */
+    }
+
+    #bild-btn:hover {
+        background-color: #B91F31; /* Changes the background color on hover */
+        color: #ffffff; /* Changes the text color to white on hover */
+        border: solid 2px #B91F31; /* Changes the border color on hover */
+        /* Hover effect for the submit button, enlarging and changing color */
+    }
+
+    #submit-btn {
+        color: #fff; /* Sets the text color for the submit button */
+        padding: 3px 20px; /* Adds padding inside the button for better spacing */
+        background-color: #B91F31; /* Sets a light background color for the button */
+        border: solid 1px #B91F31; /* Adds a border around the button with the same color as the text */
+        border-radius: 2px; /* Slightly rounds the corners of the button */
+        cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+        font-size: 1em; /* Sets the font size for the button text */
+        font-weight: 600; /* Makes the button text bold */
+        margin-top: 20px; /* Adds some space above the button */
+        font-family: "poppins", sans-serif; /* Applies the "the seasons" font family to the button */
+        /* Styles the submit button with padding, background color, and rounded corners */
+    }
+
+    #submit-btn:hover {
+        background-color: #FFFCF5; /* Changes the background color on hover */
+        color: #B91F31; /* Changes the text color to white on hover */
+        border: solid 2px #B91F31; /* Changes the border color on hover */
+        /* Hover effect for the submit button, enlarging and changing color */
+    }
+
+
+
+   
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #main-nav a {
+        font-size: 1.5em;
+    }
+
+    .clothes-subheading {
+        text-align: center;
+        font-size: 0.7em; /* Increases the font size to 2.5 times the default size */
+        width: 100%; /* Ensures the subheading spans the full width of the container */
+        height: auto; /* Automatically adjust the height based on the content */    
+        margin: 0; /* Removes any margin from the top of the subheading */
+        padding: 0;
+        font-weight: 600;
+        display: block;
+    }
+    
+    .img_clothes {
+        width: 70%; /* Make the container take up the full width of its parent */
+        max-width: 230px; /* Set a maximum width for the container */
+        height: auto; 
+        max-height: 230px;
+        margin-bottom: 0; /* Removes any default margin from the bottom of the image */
+        padding-bottom: 0; /* Removes any padding from the bottom of the image */
+        /* This styles the coffee images to fill their containers proportionally while maintaining aspect ratio */
+    }
+
+
+    .img_clothes-container-index {
+        position: relative; /* Positions the container relative to its normal position for absolute positioning inside */
+        background-color: #FFFCF5;
+        border: solid 3px #B91F31;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        width: 170px !important;
+        height: 170px !important;
+
+    }
+
+    .clothes-subheading-index {
+        text-align: center;
+        font-size: 1.5em; /* Increases the font size to 2.5 times the default size */
+        width: 100%; /* Ensures the subheading spans the full width of the container */
+        height: auto; /* Automatically adjust the height based on the content */    
+        margin: 0; /* Removes any margin from the top of the subheading */
+        padding: 0;
+        font-weight: 600;
+        display: block;
+    }
+
+    .clothing-button-container {
+        gap: 30px;
+    }
+
+    #location-index {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
+
+
+    #iframe-container-index {
+        width: 50%; /* Set iframe width to 100% */
+        flex: 1;
+        display: flex;
+    }
+
+    #iframe-container-index iframe{
+        flex: 1;
+    }
+
+
+    /*WEBPAGE 2 - SERVICES.HTML*/
+
+    .desktop-view {
+        display: none;
+    }
+
+    .mobile-view {
+        display: block;
+    }
+
+   
+
+    .preise-box {
+        display: none;
+        position: relative;
+    }
+
+    .close-btn {
+        background-color: #FFFCF5;
+        border: none;
+        font-size: 2.5em;
+        font-weight: 300;
+        cursor: pointer;
+        color: #B91F31; /* Adjust color as needed */
+        border: solid 2px #B91F31;
+        width: 35px;
+        height: 35px;
+        padding-top: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+
+
+
+
+    .preise-clothing-button-container {
+        display: flex; /* Applies a flexbox layout to the container */
+        flex-direction: row; /* Arranges child elements (articles) in a horizontal row */
+        justify-content: center;
+        margin: 0 20px 15px 20px;
+        gap: 30px; /* Adds 20px spacing between the flex items */
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        /* This sets up a flexible layout for the coffee container with even spacing between items */
+    }
+
+    .img_clothes-container {
+        width: 200px !important;
+        height: 200px !important;
+        border: solid 3px #B91F31 !important; 
+
+    }
+
+    .clothes-subheading {
+        font-size: 1.5em !important; /* Increases the font size to 2.5 times the default size */
+    }
+    
+    .red-textbox {
+        margin: 0 50px 20px 50px;
+        padding: 10px ;
+        font-size: 1.3em;
+    }
+
+    .preise-headline {
+        font-size: 2em;
+    }
+
+    .preise-subheading {
+        font-size: 1.5em;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    .preise-box {
+        margin: 20px 20px 15px 20px;
+        padding: 0 0 20px 0;
+    }
+
+    .preise-box table {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 0 0 20px 0;
+        width: 800px;
+    }
+
+    .preise-box th {
+        font-size: 1.4em;
+    }
+
+    .preise-box td {
+      font-size: 1.2em;
+    }
+
+
+    .preise-box > p {
+        font-size: 1.2em;
+        text-align: center;
+       
+    }
+
+
+    .preise-text {
+        font-size: 1.2em !important;
+        margin: 20px 0 20px 0 !important;
+        text-align: center;
+    }
+
+    #header-services > ul li {
+        font-family: "poppins", sans-serif;
+        font-size: 1.3em;
+        margin-top: 20px;
+        border: solid 1px #B91F31;
+        border-radius: 10px;
+        background-color: #B91F31;
+        color: #fff;
+        padding: 5px 15px;
+        margin: 5px 50px 5px 50px;
+    }
+
+    #header-services > ul {
+        margin-bottom: 40px;
+    }
+
+
+    .services > p {
+        margin: 0 30px;
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 50px;
+    
+    }
+
+    .preise-clothing-button-container-services {
+        display: flex; /* Applies a flexbox layout to the container */
+        flex-direction: row; /* Arranges child elements (articles) in a horizontal row */
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        gap: 50px;
+        /* This sets up a flexible layout for the coffee container with even spacing between items */
+    }  
+    
+    .clothes-subheading-services{
+        font-size: 1.5em;
+    }
+
+    #services-icon-container1 {
+        gap: 80px;
+    }
+
+
+    /*  webpage 3 - kontakt */
+
+    .kontakt-container {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        margin: 0 auto;
+        gap: 0;
+        padding: 0;
+        flex: 1;
+        width: 100%; 
+        flex-wrap: wrap;
+    
+    }
+
+    
+
+    #form-wrapper, #location {
+        flex: 1; /* Ensures they take equal width */
+        display: flex;
+        flex-direction: column; /* Stacks content vertically */
+    }
+
+    #location {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #location-wrapper {
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .iframe-container {
+        flex: 1;
+        display: flex;  
+        width: 100%;
+        height: auto;
+      
+    }
+
+    iframe {
+        flex: 1;
+        height: 100%;
+    }
+
+    /* Custom textbox styles */
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+        background-color: #ffffff; /* Sets a white background for the input fields */
+        border: 1px solid #B91F31; /* Adds a solid border with a specific color */
+        width: 50%; /* Ensures the input fields take up 50% of their container's width */
+        box-sizing: border-box; /* Ensures padding and border are included in the element’s total width/height */
+        border-radius: 2px; /* Rounds the corners of the input fields slightly */
+        padding: 5px 100px 5px 10px/* Adjust padding as needed */
+    }
+
+    #bild-btn {
+        color: #B91F31; /* Sets the text color for the submit button */
+        padding: 2px 15px; /* Adds padding inside the button for better spacing */
+        background-color: #FFFCF5; /* Sets a light background color for the button */
+        border: solid 2px #B91F31; /* Adds a border around the button with the same color as the text */
+        border-radius: 2px; /* Slightly rounds the corners of the button */
+        cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+        font-size: 1em; /* Sets the font size for the button text */
+        font-weight: 600; /* Makes the button text bold */
+        margin-top: 10px; /* Adds some space above the button */
+        font-family: "poppins", sans-serif; /* Applies the "the seasons" font family to the button */
+        /* Styles the submit button with padding, background color, and rounded corners */
+    }
+
+    #submit-btn {
+        color: #fff; /* Sets the text color for the submit button */
+        padding: 3px 20px; /* Adds padding inside the button for better spacing */
+        background-color: #B91F31; /* Sets a light background color for the button */
+        border: solid 1px #B91F31; /* Adds a border around the button with the same color as the text */
+        border-radius: 2px; /* Slightly rounds the corners of the button */
+        cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+        font-size: 1em; /* Sets the font size for the button text */
+        font-weight: 600; /* Makes the button text bold */
+        margin-top: 15px; /* Adds some space above the button */
+        font-family: "poppins", sans-serif; /* Applies the "the seasons" font family to the button */
+        /* Styles the submit button with padding, background color, and rounded corners */
+    }
+    
+
+
+
+
+ 
+
+
+
+
+
+}

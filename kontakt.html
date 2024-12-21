@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de"> <!-- Declares the document type as HTML5 and sets the language to English -->
+<head>
+    <title>Kontakt – Hong Anh's Änderungsschneiderei Berlin Karlshorst </title> <!-- Sets the page title, displayed in the browser tab -->
+    <meta charset="utf-8"> <!-- Specifies the character encoding for the document as UTF-8 -->
+    <meta name="description" content="Kontaktieren Sie Hong Anh's Änderungsschneiderei in Berlin Karlshorst für Textilreinigung, Maßanfertigung und Reparaturen. Jetzt Anfrage senden!">
+
+    <!-- SEO-optimierte Meta-Keywords (Meta-Keywords werden heutzutage von Google nicht mehr berücksichtigt, können aber für andere Suchmaschinen hilfreich sein) -->
+    <meta name="keywords" content="Kontakt Änderungsschneiderei Karlshorst, Textilreinigung Karlshorst, Hong Anh's Änderungsschneiderei, Maßanfertigung Karlshorst, Kleidung reparieren, Schneiderei Berlin, Anfrage Änderung Karlshorst">
+    <meta name="author" content="Mai Phuong Nguyen"> <!-- Specifies the author of the document -->
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!-- Ensures responsive design on mobile devices -->
+
+    <link href="css/style-mix.css" rel="stylesheet"> <!-- Links the external stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+    <script src="js/script-mix.js"></script> <!-- Links the external JavaScript file -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/cum0yvz.css"> <!--adobe fonts - cocon pro, poppins-->
+    <link rel="stylesheet" href="https://use.typekit.net/cum0yvz.css">
+</head>
+
+<body>
+    <header> 
+        <div>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/Logo2.png" alt="Logo der Hong Anh's Änderungsschneiderei und Textilreinigung"> <!--eingenes logog reinpacken-->
+                </a>
+            </div>
+            <div id="meta-and-navi">
+                    <nav id="main-nav">
+                    <div id="mobile-nav-icons"> 
+                        <i class="fa fa-bars fa-3x"></i>
+                        <i class="fa fa-close fa-3x"></i>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a> <!--LINKVERÄNDERN SPÄTER + HTML DOKUMENT NAM-->
+                        </li>
+                        <li class="dropdown">
+                            <a href="services.html">Service</a> <!--LINKVERÄNDERN SPÄTER + HTML DOKUMENT NAME-->
+                                <div class="dropdown-menu">
+                                <ul class="dropdown-list">
+                                    <li><a href="preise-aenderungen.html" class="dropdown-item" id="dropdown-item1">Änderung</a></li>
+                                    <li><a href="preise-reinigung.html" class="dropdown-item" id="dropdown-item2">Reinigung</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="kontakt.html" class="active">Kontakt</a> <!--LINKVERÄNDERN SPÄTER + HTML DOKUMENT NAM-->
+                        </li>
+                        <li class="mobile-only">
+                            <a href="impressum.html">Impressum</a> <!--LINKVERÄNDERN + HTML DOKUMENT NAMSPÄTER-->
+                        </li>
+                    </ul>
+                    </nav>	
+            </div>
+        </div>
+    </header>
+
+
+    <main> <!-- Main content of the page -->
+
+        <article> <!-- Section for location information -->
+            <h2> Kontaktieren Sie uns gerne! </h2> <!-- Heading for location section -->
+            <div class="kontakt-container">
+                <div id="form-wrapper"> <!-- Wrapper for the form -->
+                    <div id="form"> <!-- Form container -->
+                        <form id="regform" action="php/kontaktformular.php" method="POST"> <!-- Form element, submitting data using POST to the specified URL -->
+        
+                            <h3 class="form_heading">Kontaktformular</h3> <!-- Subheading for account information -->
+        
+                            <!-- Username input field -->
+                            <div class="textinput">
+                                <label for="name" class="label"> Name <sup>*</sup></label>  <!-- Label for username -->
+                                <input type="text" id="name" name="name" placeholder="Max Musterman" required> <!-- Username input box -->
+                            </div>
+        
+                            <!-- Email input field -->
+                            <div class="textinput">
+                                <label for="email" class="label">Email Adresse <sup>*</sup></label>  <!-- Label for email -->
+                                <input type="email" id="email" name="email" placeholder="max.musterman@gmail.com" required> <!-- Email input box -->
+                            </div>
+        
+                            <div class="textinput">
+                                <label for="phone" class="label">Telefonnummer</label> 
+                                <input type="tel" id="phone" name="phone" placeholder="+49 151 23456789"> <!-- Phone number input box -->
+                            </div>
+
+                            <div class="textinput">
+                                <label for="subject" class="label">Betreff <sup>*</sup></label> 
+                                <textarea id="subject" name="subject" rows="1" cols="10" placeholder="Betreff" required></textarea> 
+                            </div>
+
+        
+                            <div class="textinput">
+                                <label for="message" class="label">Nachricht <sup>*</sup></label> 
+                                <textarea id="message" name="message" rows="4" cols="50" placeholder="Ihre Nachricht an uns (bitte geben Sie Details zur Anfrage an)" required></textarea> 
+                            </div>
+        
+                            <h4>Art der Anfrage</h4>
+                            <div class="checkbox">
+        
+                                <div>
+                                    <input type="checkbox" id="aenderung" name="art-anfertigung" value="aenderung">
+                                    <label for="aenderung">Änderung/Maßanfertigung</label>
+                                </div>
+        
+                                <div>
+                                    <input type="checkbox" id="reparatur" name="art-anfertigung" value="reparatur">
+                                    <label for="reparatur">Reparatur</label>
+                                </div>
+        
+                                <div>
+                                    <input type="checkbox" id="reinigung" name="art-anfertigung" value="reinigung">
+                                    <label for="reinigung">Reinigungsannahme</label>
+                                </div>
+        
+                                <div>
+                                    <input type="checkbox" id="schuhreparatur" name="art-anfertigung" value="schuhreparatur">
+                                    <label for="schuhreparatur">Schuhreparaturannahme</label>
+                                </div>
+        
+                                <div>
+                                    <input type="checkbox" id="sonstiges" name="art-anfertigung" value="sonstiges">
+                                    <label for="sonstiges">Sonstiges</label>
+                                </div>
+                            </div>
+        
+        
+                            <button type="submit" id="submit-btn">Absenden</button>
+                        </form>
+                    </div>
+                </div> 
+
+
+                <div id="location"> <!-- Wrapper for location section -->
+                    <div id="location-wrapper"> <!-- Section for location details -->                 
+                        <h3>Adresse</h3> <!-- Heading for address -->
+                        <p> Treskowallee 66, <br>
+                            10318 Karlshorst Berlin
+                        </p>
+
+                        <h3 >Öffnungszeiten</h3> <!-- Heading for opening hours -->
+                        <p>
+                            Mo.- Fr.: 9 Uhr bis 18 Uhr <br>
+                            Pause:  13 Uhr bis 13:30 Uhr <br>
+                            Samstag: 9 Uhr bis 14 Uhr <br>
+                        </p>
+
+                        <h3>Contact Us</h3> <!-- Heading for contact information -->
+                        <p>
+                            Telefon: 0152-08612911 <br>
+                            Email: 
+                            <a href="mailto:kontakt@hong-anhs-aenderungschneiderei.de?subject=Inquiry%20from%20Website&body=Hello,%20I%20would%20like%20to%20inquire%20about..." id="kontakt-email">
+                                kontakt@hong-anhs-aenderungschneiderei.de
+                            </a>
+                    
+                        </p>
+                    </div>
+
+                    <div class="iframe-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.5768293863593!2d13.523994776679137!3d52.48679727205243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8492838437faf%3A0x37e8620fd1b365f8!2sTreskowallee%2066%2C%2010318%20Berlin%2C%20Deutschland!5e0!3m2!1sde!2sau!4v1730185542018!5m2!1sde!2sau" width="1500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+                    </div>
+                
+                </div>
+            </div>
+        </article>  
+
+        <p id="kontakt-telefon">Bei dringenden Anfragen kontaktieren Sie uns am besten per Telefon!</p>
+      
+    </main>
+
+    <footer class="desktop-view"> <!-- Footer section -->
+        <div class="footer-content">
+            <div>
+                <h3>Adresse</h3> <!-- Heading for address -->
+                <p class="footer-text"> Treskowallee 66, <br>
+                    10318 Karlshorst Berlin
+                </p>
+            </div>
+    
+            <div>
+                <h3 >Öffnungszeiten</h3> <!-- Heading for opening hours -->
+                <p>
+                    Mo.- Fr.: 9 Uhr bis 18 Uhr <br>
+                    Pause:  13 Uhr bis 13:30 Uhr <br>
+                    Samstag: 9 Uhr bis 14 Uhr <br>
+                </p>
+            </div>
+    
+            <div>
+                <h3 >Rechtliches</h3> <!-- Heading for opening hours -->
+                <p>
+                    Datenschutzerklärung <br>
+                    <a href="impressum.html">Impressum</a> <br><br>        
+                </p>
+            </div>
+        </div>
+
+        <p class="flaticon">
+            Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
+        </p>
+        <p class="copyright">&copy; 2023 Hong Anh's Änderungsschneiderei & Textilreinigung. All rights reserved.</p> <!-- Footer content with copyright and Impressum link -->
+    </footer>
+
+    <footer class="mobile-view"> <!-- Footer section -->
+        <h3>Adresse</h3> <!-- Heading for address -->
+        <p class="footer-text"> Treskowallee 66, <br>
+            10318 Karlshorst Berlin
+        </p>
+
+        <h3 >Öffnungszeiten</h3> <!-- Heading for opening hours -->
+        <p>
+            Mo.- Fr.: 9 Uhr bis 18 Uhr <br>
+            Pause:  13 Uhr bis 13:30 Uhr <br>
+            Samstag: 9 Uhr bis 14 Uhr <br>
+        </p>
+
+        <h3 >Rechtliches</h3> <!-- Heading for opening hours -->
+        <p>
+            Datenschutzerklärung <br>
+            <a href="impressum.html">Impressum</a> <br><br>
+            Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
+
+        </p>
+
+        <p class="copyright">&copy; 2023 Hong Anh's Änderungsschneiderei & Textilreinigung. All rights reserved.</p> <!-- Footer content with copyright and Impressum link -->
+    </footer>
+</body>
+</html>
